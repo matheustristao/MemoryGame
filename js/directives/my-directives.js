@@ -7,7 +7,9 @@ angular.module('myDirectives', [])
             ddo.restric = "AE";
 
             ddo.scope = {
-                name: '@name'
+                name: '@',
+                id: '@',
+                url: '@'
             };
 
             ddo.transclude = true;

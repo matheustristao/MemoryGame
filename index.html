@@ -10,13 +10,18 @@
     </head>
     <body>
 
-        <div class="all">
+        <div class="all" ng-controller="MainController">
             <header id="titleHeader">
 
             </header>
 
             <main>
-
+                <!--
+                card-pack is a directive, defined in js/directives/card-pack.html
+                name, id and url will be able to be used because its values are setted using attributes defined in main-controller for 'cards' object
+                ng-repeat makes this tag repeat for each card in cards
+                -->
+                <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}"> </card-pack>
             </main>
 
             <footer>
@@ -33,7 +38,7 @@
         <script src="js/app.js"></script>
 
         <script src="js/controllers/main-controller.js"></script>
-       
+
         <script src="js/directives/my-directives.js"></script>
     </body>
 </html>
