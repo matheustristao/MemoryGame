@@ -21,10 +21,11 @@
                     <!--
                     card-pack is a directive, defined in js/directives/card-pack.html
                     name, id and url will be able to be used because their values are setted using attributes defined in main-controller for 'cards' object
+                    toggle will run the toggle function in main-controller, setting card-pack as parameter
                     ng-repeat makes this tag repeat for each card in cards
                     -->
-                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}"> </card-pack>
-                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}"> </card-pack>
+                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}" toggle="toggle(this.card)"> </card-pack>
+                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}" toggle="toggle(this.card)"> </card-pack>
 
                 </section>
             </main>

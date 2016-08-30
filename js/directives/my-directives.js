@@ -9,7 +9,8 @@ angular.module('myDirectives', [])
             ddo.scope = {
                 name: '@',
                 id: '@',
-                url: '@'
+                url: '@',
+                toggle: '&'
             };
 
             ddo.transclude = true;

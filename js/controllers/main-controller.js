@@ -48,4 +48,8 @@ angular.module('memory').controller('MainController', function ($scope) {
         }
     ];
 
+    $scope.toggle = function (card) {
+        console.log(card.name);
+    };
+
 });
