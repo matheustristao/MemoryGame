@@ -1,0 +1,9 @@
+/* 
+    Created on : 30/08/2016, 10:08:50
+    Author     : matheusanjos
+*/
+
+body {
+    font: 62.5%/1.4 sans-serif; /* 62.5% of 16px = 10px, it makes easier to use 'em' , a relative measure based on font-size */
+    background: #F7F7F7; /* Background color of the body*/
+}
