@@ -1,11 +1,15 @@
-<div>
-    <p>
-        id = {{id}}
-    </p>
-    <p>
-        name = {{name}}
-    </p>
-    <p>
-        url = {{url}}
-    </p>
-</div>
+
+<article id="card" class="flip-container">
+    <div class="flipper">
+        <div class="front">
+            <figure>
+                <img src="images/wallpaper.png" alt="backside card">
+            </figure>
+        </div>
+        <div class="back">
+            <figure>
+                <img src="{{url}}" alt="{{url}}">
+            </figure>
+        </div>
+    </div>
+</article>

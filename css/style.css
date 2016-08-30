@@ -7,3 +7,47 @@ body {
     font: 62.5%/1.4 sans-serif; /* 62.5% of 16px = 10px, it makes easier to use 'em' , a relative measure based on font-size */
     background: #F7F7F7; /* Background color of the body*/
 }
+
+section#gameBoard{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.flip-container{
+    -webkit-perspective: 500;
+    perspective: 500;
+    width: 134px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.flip-container:hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipper {
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}

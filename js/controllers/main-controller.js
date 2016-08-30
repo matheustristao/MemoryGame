@@ -48,5 +48,4 @@ angular.module('memory').controller('MainController', function ($scope) {
         }
     ];
 
-
 });

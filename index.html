@@ -16,12 +16,17 @@
             </header>
 
             <main>
-                <!--
-                card-pack is a directive, defined in js/directives/card-pack.html
-                name, id and url will be able to be used because its values are setted using attributes defined in main-controller for 'cards' object
-                ng-repeat makes this tag repeat for each card in cards
-                -->
-                <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}"> </card-pack>
+                <section id="gameBoard">
+
+                    <!--
+                    card-pack is a directive, defined in js/directives/card-pack.html
+                    name, id and url will be able to be used because their values are setted using attributes defined in main-controller for 'cards' object
+                    ng-repeat makes this tag repeat for each card in cards
+                    -->
+                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}"> </card-pack>
+                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}"> </card-pack>
+
+                </section>
             </main>
 
             <footer>
