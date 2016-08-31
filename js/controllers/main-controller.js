@@ -6,126 +6,144 @@ angular.module('memory').controller('MainController', function ($scope, $timeout
             name: "eigth",
             url: "images/eigth.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 2,
             name: "tennis",
             url: "images/tennis.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 3,
             name: "football",
             url: "images/football.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 4,
             name: "white",
             url: "images/white.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 5,
             name: "bow",
             url: "images/bow.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 6,
             name: "volley",
             url: "images/volley.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 7,
             name: "basket",
             url: "images/basket.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 8,
             name: "baseball",
             url: "images/baseball.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 9,
             name: "golf",
             url: "images/golf.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 10,
             name: "eigth",
             url: "images/eigth.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 11,
             name: "tennis",
             url: "images/tennis.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 12,
             name: "football",
             url: "images/football.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 13,
             name: "white",
             url: "images/white.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 14,
             name: "bow",
             url: "images/bow.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 16,
             name: "volley",
             url: "images/volley.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 16,
             name: "basket",
             url: "images/basket.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 17,
             name: "baseball",
             url: "images/baseball.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         },
         {
             id: 18,
             name: "golf",
             url: "images/golf.png",
             show: "hide",
-            display: "true"
+            display: "true",
+            random: Math.random()
         }
     ];
 
@@ -137,7 +155,7 @@ angular.module('memory').controller('MainController', function ($scope, $timeout
     var count = 0;
     var nonDisplayedCards = 0;
     $scope.toggle = function (cards, card) {
-
+        
         if (card.show === "show") {
             closeAll(cards);
             count = 0;

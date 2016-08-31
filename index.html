@@ -24,7 +24,7 @@
                     toggle will run the toggle function in main-controller, setting card-pack as parameter
                     ng-repeat makes this tag repeat for each card in cards
                     -->
-                    <card-pack ng-repeat="card in cards" name="{{card.name}}" id="{{card.id}}" url="{{card.url}}" show="{{card.show}}" display="{{card.display}}" toggle="toggle(cards,this.card)"> </card-pack>
+                    <card-pack ng-repeat="card in cards|orderBy:'random'" random='{{}}' name="{{card.name}}" id="{{card.id}}" url="{{card.url}}" show="{{card.show}}" display="{{card.display}}" toggle="toggle(cards,this.card)"> </card-pack>
 
                 </section>
             </main>
