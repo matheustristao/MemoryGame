@@ -22,10 +22,10 @@ section#gameBoard{
     margin: 10px;
 }
 
-.flip-container:hover .flipper {
+.flip-container.show .flipper {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-     -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 

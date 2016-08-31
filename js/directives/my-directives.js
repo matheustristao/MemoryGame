@@ -10,6 +10,7 @@ angular.module('myDirectives', [])
                 name: '@',
                 id: '@',
                 url: '@',
+                show: '@',
                 toggle: '&'
             };
 
