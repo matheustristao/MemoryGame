@@ -5,109 +5,127 @@ angular.module('memory').controller('MainController', function ($scope) {
             id: 1,
             name: "eigth",
             url: "images/eigth.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 2,
             name: "tennis",
             url: "images/tennis.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 3,
             name: "football",
             url: "images/football.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 4,
             name: "white",
             url: "images/white.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 5,
             name: "bow",
             url: "images/bow.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 6,
             name: "volley",
             url: "images/volley.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 7,
             name: "basket",
             url: "images/basket.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 8,
             name: "baseball",
             url: "images/baseball.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 9,
             name: "golf",
             url: "images/golf.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 10,
             name: "eigth",
             url: "images/eigth.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 11,
             name: "tennis",
             url: "images/tennis.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 12,
             name: "football",
             url: "images/football.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 13,
             name: "white",
             url: "images/white.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 14,
             name: "bow",
             url: "images/bow.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 16,
             name: "volley",
             url: "images/volley.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 16,
             name: "basket",
             url: "images/basket.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 17,
             name: "baseball",
             url: "images/baseball.png",
-            show: "hide"
+            show: "hide",
+            display: true
         },
         {
             id: 18,
             name: "golf",
             url: "images/golf.png",
-            show: "hide"
+            show: "hide",
+            display: true
         }
     ];
 
@@ -119,14 +137,26 @@ angular.module('memory').controller('MainController', function ($scope) {
     var count = 0;
     $scope.toggle = function (cards, card) {
 
-        count++;
-        if (count === 3) {
-            for (var i = 0; i < cards.length; i++) {
-                cards[i].show = "hide";
+        if (card.show === "show") {
+            closeAll(cards);
+            count = 0;
+        } else {
+            count++;
+            if (count === 3) {
+                closeAll(cards);
+                count = 1;
             }
-            count = 1;
+            card.show = "show";
+            card.display = false;
         }
-        card.show = "show";
+
+        alert(count);
     };
+
+    function closeAll(cards) {
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].show = "hide";
+        }
+    }
 
 });

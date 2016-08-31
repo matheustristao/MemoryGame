@@ -11,6 +11,7 @@ angular.module('myDirectives', [])
                 id: '@',
                 url: '@',
                 show: '@',
+                display: '@',
                 toggle: '&'
             };
 
