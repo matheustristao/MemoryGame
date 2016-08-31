@@ -1,4 +1,4 @@
-angular.module('memory').controller('MainController', function ($scope) {
+angular.module('memory').controller('MainController', function ($scope, $timeout) {
 
     $scope.cards = [
         {
@@ -135,6 +135,7 @@ angular.module('memory').controller('MainController', function ($scope) {
      * The function toogle has two parametes: all the cards from the board and the specific card clicked
      */
     var count = 0;
+    var nonDisplayedCards = 0;
     $scope.toggle = function (cards, card) {
 
         if (card.show === "show") {
@@ -147,17 +148,30 @@ angular.module('memory').controller('MainController', function ($scope) {
                 count = 1;
             }
 
+            /*
+             * the loop here iterates all of the cards. if a card is shown and has the same name of the clicked card, both closes after 0.9 seconds
+             */
             for (var i = 0; i < cards.length; i++) {
                 if (cards[i].name === card.name) {
                     if (cards[i].show === "show") {
-                        card.show = "show";
-                        card.display = "false";
-                        cards[i].display = "false";
+
+                        var card1 = card;
+                        var card2 = cards[i];
+
+                        $timeout(function () {
+                            card1.display = "false";
+                            card2.display = "false";
+                            nonDisplayedCards = nonDisplayedCards + 2;
+                            if (nonDisplayedCards === 18) {
+                                alert("Congrats");
+                            }
+                        }, 900);
                     }
                 }
             }
 
             card.show = "show";
+
 
         }
     };
