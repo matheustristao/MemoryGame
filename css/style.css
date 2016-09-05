@@ -55,3 +55,36 @@ section#gameBoard{
     position: absolute;
     top: 0;
 }
+
+header#headerPage{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    background: #0E2B3D;
+    color: #fff;
+}
+
+footer{
+    background: #0E2B3D;
+    margin-top: 2em;
+}
+
+footer section p{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+footer section p#nome:after{
+    content: "(matheus.tristao@gmail.com)"
+}
+
+footer section a:hover{
+    color: yellow;
+}
+
+footer img{
+    height: 3em;
+}

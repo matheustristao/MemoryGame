@@ -155,7 +155,7 @@ angular.module('memory').controller('MainController', function ($scope, $timeout
     var count = 0;
     var nonDisplayedCards = 0;
     $scope.toggle = function (cards, card) {
-        
+
         if (card.show === "show") {
             closeAll(cards);
             count = 0;
@@ -176,14 +176,12 @@ angular.module('memory').controller('MainController', function ($scope, $timeout
                         var card1 = card;
                         var card2 = cards[i];
 
-                        $timeout(function () {
-                            card1.display = "false";
-                            card2.display = "false";
-                            nonDisplayedCards = nonDisplayedCards + 2;
-                            if (nonDisplayedCards === 18) {
-                                alert("Congrats");
-                            }
-                        }, 900);
+                        card1.display = "false";
+                        card2.display = "false";
+                        nonDisplayedCards = nonDisplayedCards + 2;
+                        if (nonDisplayedCards === 18) {
+                            alert("Congrats");
+                        }
                     }
                 }
             }
