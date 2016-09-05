@@ -30,7 +30,7 @@ section#gameBoard{
 }
 
 .flip-container.false{
-    display: none;
+    visibility:hidden;
 }
 
 .flipper {
